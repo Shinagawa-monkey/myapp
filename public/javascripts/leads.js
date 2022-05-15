@@ -13,5 +13,5 @@ deleteLead = ((leadId) => {
         error: ((error) => {
             console.log("Error:", error);
         })
-    })
+    });
 });
