@@ -1,7 +1,7 @@
-const LocalStrategy = require('passport-local').Strategy;
+let LocalStrategy = require('passport-local').Strategy;
 
-const bcrypt = require('bcrypt');
-const models = require('./models');
+let bcrypt = require('bcrypt');
+let models = require('./models');
 
 const validPassword = ((user, password) => {
   return bcrypt.compareSync(password, user.password);
@@ -14,7 +14,7 @@ module.exports = ((passport) => {
   passport.deserializeUser((id, done) => {
     models.User.findOne({
       where: {
-        id: id
+        'id': id
       }
     }).then(user => {
       if (user == null) {
@@ -28,7 +28,7 @@ module.exports = ((passport) => {
     passwordField: 'password',
     passReqToCallback: true
   }, ((req, email, password, done) => {
-    return.models.User.findOne({
+    return models.User.findOne({
       where: {
         'email': email
       },
