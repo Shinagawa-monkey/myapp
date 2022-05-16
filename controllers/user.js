@@ -33,15 +33,15 @@ exports.signup = ((req, res, next) => {
 });
 
 exports.login = ((req, res, next) => {
-  // passport.authenticate('local', {
-	// 	successRedirect: "/",
-	// 	failureRedirect: "/login",
-	// 	failureFlash: true
-	// })(req, res, next);
+  passport.authenticate('local', {
+		successRedirect: "/",
+		failureRedirect: "/login",
+		failureFlash: true
+	})(req, res, next);
 });
 
 exports.logout = ((req, res, next) => {
-  // req.logout();
-	// req.session.destroy();
-	// res.redirect('/');
+  req.logout();
+	req.session.destroy();
+	res.redirect('/');
 });
