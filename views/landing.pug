@@ -6,12 +6,12 @@ html(lang='en')
     header
       include common/navbar.pug
       +navbar()
-      .container
-        .row.align-items-center
-          .col-md-6.order-md-1.text-center.text-md-start.pe-md-5
-            h1.mb-3 Minimum Viable Landing Page
-            p.lead This tutorial teaches you how to build a NodeJS web application covering key topics.
-            p.lead.mb-4 Learn how to launch a landing page and start collecting sales leads.
+      .container.py-4
+        .p-5.mb-4.bg-light
+          .container-fluid.py-5
+            h1.display-5.fw-bold Minimum Viable Landing Page
+            p.lead.col-md-8.fs-4 This tutorial teaches you how to build a NodeJS web application covering key topics.
+            p.lead.col-md-8.fs-4 Learn how to launch a landing page and start collecting sales leads.
             form(action="/", method="POST")
               .input-group.mb-3
                 input(name="lead_email", type="email", placeholder="Enter your email address").form-control
