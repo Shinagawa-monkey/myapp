@@ -1,13 +1,13 @@
 doctype html
-html(lang='en')
+html.h-100(lang='en')
   include ../common/head.pug
   +head("Leads")
-  body
+  body.d-flex.flex-column.h-100
     header
       include ../common/navbar.pug
       +navbar()
       .container.py-4
-        .p-5.mb-4.bg-light
+        .px-5.py-0.mb-4.bg-light
           .container-fluid.py-5
             h1.display-5.fw-bold Lead
             table.table

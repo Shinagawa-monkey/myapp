@@ -11,11 +11,11 @@ exports.show_login = ((req, res, next) => {
 });
 
 exports.show_signup = ((req, res, next) => {
-  res.render('user/signup', { formData: req.body, errors: {} });
+  res.render('user/signup', { formData: {}, errors: {} });
 });
 
 const rerender_signup = ((errors, req, res, next) => {
-  res.render('user/signup', { formData: {}, errors: errors});
+  res.render('user/signup', { formData: req.body, errors: errors});
 });
 
 const generateHash = ((password) => {

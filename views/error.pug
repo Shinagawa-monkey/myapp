@@ -1,16 +1,17 @@
 doctype html
-html(lang='en')
+html.h-100(lang='en')
   include common/head.pug
   +head("Error")
-  body
+  body.d-flex.flex-column.h-100
     header
       include common/navbar.pug
       +navbar(user)
-      .container-fluid.py-5
-        .p-5.mb-4.bg-light
+      .container-fluid
+        .p-5.mb-4.bg-transparent
           h1.text-center= message
           h2.text-center.text-danger= error.status
-          pre.text-danger #{error.stack}
+          img.mx-auto.d-block.img-fluid(src="/images/error.jpg", width="250", height="250")
+          // pre.text-danger #{error.stack}
     include common/footer.pug
     +footer()
     script(src='/javascripts/leads.js')
