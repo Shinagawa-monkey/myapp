@@ -36,10 +36,6 @@ module.exports = {
       	allowNull: false,
       	type: Sequelize.STRING
       },
-      is_admin: {
-        allowNull: true,
-        type: Sequelize.BOOLEAN        
-      }
     })
   },
   down: (queryInterface, Sequelize) => {
